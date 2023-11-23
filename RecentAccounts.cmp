@@ -1,0 +1,12 @@
+<aura:component controller="AccountController">
+    <aura:attribute name="accounts" type="Account[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:card title="Recent Accounts">
+        <lightning:datatable
+            data="{!v.accounts}"
+            columns="{!v.columns}"
+            keyField="Id"
+            hideCheckboxColumn="true"/>
+    </lightning:card>
+</aura:component>
